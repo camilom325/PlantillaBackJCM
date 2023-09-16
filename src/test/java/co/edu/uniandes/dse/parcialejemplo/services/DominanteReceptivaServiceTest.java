@@ -20,7 +20,6 @@ import co.edu.uniandes.dse.parcialejemplo.entities.ReceptivaEntity;
 import co.edu.uniandes.dse.parcialejemplo.entities.DominanteEntity;
 import co.edu.uniandes.dse.parcialejemplo.exceptions.EntityNotFoundException;
 import co.edu.uniandes.dse.parcialejemplo.exceptions.IllegalOperationException;
-import co.edu.uniandes.dse.parcialejemplo.services.DominanteReceptivaService;
 import uk.co.jemos.podam.api.PodamFactory;
 import uk.co.jemos.podam.api.PodamFactoryImpl;
 
@@ -79,6 +78,7 @@ public class DominanteReceptivaServiceTest {
         dominanteReceptivaService.addReceptiva(newDominante.getId(), receptiva.getId());
 
         ReceptivaEntity lastReceptiva = dominanteReceptivaService.getReceptiva(newDominante.getId(), receptiva.getId());
+        // TODO llenar de las propiedades de la clase
         assertEquals(receptiva.getId(), lastReceptiva.getId());
         assertEquals(receptiva.getPropiedad(), lastReceptiva.getPropiedad());
     }
